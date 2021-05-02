@@ -10,6 +10,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Gerardo Perrucci: Demo site</h1>
       <header className="App-header">
         <p>Transaction list</p>
         {transactionList.map((t: any) => (
