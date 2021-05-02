@@ -1,16 +1,17 @@
 import React from "react";
+import { API } from './config'
 
 function App() {
   const [transactionList, setTransactionList] = React.useState([]);
   React.useEffect(() => {
-    fetch("http://localhost:8000/api/transactions/")
+    fetch(`${API}transactions/`)
       .then((r) => r.json())
       .then(setTransactionList);
   }, []);
 
   return (
     <div className="App">
-      <h1>Gerardo Perrucci: Demo site</h1>
+      <h1>Test site</h1>
       <header className="App-header">
         <p>Transaction list</p>
         {transactionList.map((t: any) => (
